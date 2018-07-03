@@ -35,7 +35,10 @@ def print_dictionary(rating_dict):
 def add_ratings(rating_dict):
 
     new_rest_name = input("Hello! Enter restaurant name. ")
-    new_rest_rating = input("Enter restaunt rating. ")
+    if new_rest_name.isalpha() == True:
+        new_rest_rating = input("Enter restaunt rating. ")
+    else:
+        new_rest_name = input("Please enter a correct restaurant name.")
 
     rating_dict[new_rest_name] = new_rest_rating
 
